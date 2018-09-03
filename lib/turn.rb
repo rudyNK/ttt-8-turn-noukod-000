@@ -23,7 +23,7 @@ end
     turn(board)
   end
   display_board(board)
-end
+
 def position_taken?(board, location)
   board[location] != " "
 end
