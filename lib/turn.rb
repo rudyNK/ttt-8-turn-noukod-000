@@ -20,6 +20,22 @@ def position_taken?(board, index)
   board[index] != " "
 end
   # position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1)
+  def position_taken?(board, index)
+  # basic solution:
+
+  # taken = nil
+  # if (board[index] ==  " " || board[index] == "" || board[index] == nil)
+  #   taken = false
+  # else
+  #   taken = true
+  # end
+  # taken
+
+  # advanced solution w/ ternary operator
+  (board[index] ==  " " || board[index] == "" || board[index] == nil) ?
+    false : true
+
+end
 
 def turn(board)
   puts "Please enter 1-9:"
