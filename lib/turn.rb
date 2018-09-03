@@ -5,6 +5,7 @@ def display_board(board)
   puts "-----------"
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
+
 def valid_move?(board, position)
   if position.to_i.between?(0,8)
     if !position_taken?(board, position.to_i-1)
