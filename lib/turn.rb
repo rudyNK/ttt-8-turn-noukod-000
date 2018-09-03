@@ -22,13 +22,14 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   position = input_to_index(input)
-  if valid_move?(board, input)
-    move(board, input)
+  if valid_move?(board, position)
+    move(board, position)
+      display_board(board)
   else
     turn(board)
   end
-  display_board(board)
 end
+
 def position_taken?(board, location)
   board[location] != " "
 end
