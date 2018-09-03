@@ -5,28 +5,24 @@ def display_board(board)
   puts "-----------"
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
-
 def valid_move?(board, position)
-  if position.to_i.between?(0,8)
+  if position.to_i.between?(1,9)
     if !position_taken?(board, position.to_i-1)
       true
     end
   end
   # position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1)
-
+end
 def turn(board)
   puts "Please enter 1-9:"
-end
-
   input = gets.strip
-
   if valid_move?(board, input)
     move(board, input)
   else
     turn(board)
   end
-display_board(board)
-
+  display_board(board)
+end
 def position_taken?(board, location)
   board[location] != " "
 end
